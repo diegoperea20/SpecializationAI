@@ -1,7 +1,7 @@
 import random
 import numpy as np
 from colored import fg, attr
-
+#https://github.com/GeoRCode
 
 # Función que calcula el fitness score de cada quadgram
 def calc_score(text, quadgrams):
