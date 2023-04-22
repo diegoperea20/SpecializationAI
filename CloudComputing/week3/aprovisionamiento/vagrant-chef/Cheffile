@@ -1,0 +1,34 @@
+site 'https://supermarket.chef.io/api/v1'
+
+cookbook 'jupyter'
+
+
+execute "run-chef-client" do
+    command "sudo chef-client"
+  end
+  
+# Actualiza el sistema operativo
+execute "apt-update" do
+    command "sudo apt update"
+  end
+  
+  # Instala Python y pip
+  execute "install-python" do
+    command "sudo apt install -y python3-pip"
+  end
+  
+  # Instala Jupyter
+  execute "install-jupyter" do
+    command "pip3 install jupyter"
+  end
+  
+  # Agrega ~/.local/bin al PATH
+  execute "add-path" do
+    command "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.bashrc"
+  end
+  
+  # Ejecuta Jupyter Notebook
+  execute "run-jupyter" do
+    command "jupyter notebook --ip=0.0.0.0"
+  end
+  
