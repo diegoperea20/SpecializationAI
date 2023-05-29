@@ -1,0 +1,8 @@
+https://github.com/diegoperea20/Clasification-Reviews-API-JSON-
+
+https://github.com/diegoperea20/API-Clasification-Reviews
+
+https://github.com/diegoperea20/Clasification-Reviews
+
+the work in Azure ML was with then dataset IMBD for his classification 
+in positive or negatives reviews.
